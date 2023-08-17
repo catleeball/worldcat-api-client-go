@@ -10,52 +10,52 @@ Testing MemberGeneralHoldingsApiService
 package openapi
 
 import (
-	"context"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"testing"
+    "context"
+    openapiclient "github.com/catleeball/worldcat-api-client-go"
+    "github.com/stretchr/testify/assert"
+    "github.com/stretchr/testify/require"
+    "testing"
 )
 
 func Test_openapi_MemberGeneralHoldingsApiService(t *testing.T) {
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test MemberGeneralHoldingsApiService FindBibDetailedHoldings", func(t *testing.T) {
+    t.Run("Test MemberGeneralHoldingsApiService FindBibDetailedHoldings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibDetailedHoldings(context.Background()).Execute()
+        resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibDetailedHoldings(context.Background()).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
-	t.Run("Test MemberGeneralHoldingsApiService FindBibHoldings", func(t *testing.T) {
+    t.Run("Test MemberGeneralHoldingsApiService FindBibHoldings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibHoldings(context.Background()).Execute()
+        resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibHoldings(context.Background()).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
-	t.Run("Test MemberGeneralHoldingsApiService FindBibSummaryHoldings", func(t *testing.T) {
+    t.Run("Test MemberGeneralHoldingsApiService FindBibSummaryHoldings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibSummaryHoldings(context.Background()).Execute()
+        resp, httpRes, err := apiClient.MemberGeneralHoldingsApi.FindBibSummaryHoldings(context.Background()).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
 }

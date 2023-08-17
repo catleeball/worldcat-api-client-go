@@ -10,54 +10,54 @@ Testing LocalHoldingsResourcesApiService
 package openapi
 
 import (
-	"context"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"testing"
+    "context"
+    openapiclient "github.com/catleeball/worldcat-api-client-go"
+    "github.com/stretchr/testify/assert"
+    "github.com/stretchr/testify/require"
+    "testing"
 )
 
 func Test_openapi_LocalHoldingsResourcesApiService(t *testing.T) {
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test LocalHoldingsResourcesApiService RetrieveLhr", func(t *testing.T) {
+    t.Run("Test LocalHoldingsResourcesApiService RetrieveLhr", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		var controlNumber string
+        var controlNumber string
 
-		resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.RetrieveLhr(context.Background(), controlNumber).Execute()
+        resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.RetrieveLhr(context.Background(), controlNumber).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
-	t.Run("Test LocalHoldingsResourcesApiService SearchLhr", func(t *testing.T) {
+    t.Run("Test LocalHoldingsResourcesApiService SearchLhr", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.SearchLhr(context.Background()).Execute()
+        resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.SearchLhr(context.Background()).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
-	t.Run("Test LocalHoldingsResourcesApiService SearchRetrainedLhr", func(t *testing.T) {
+    t.Run("Test LocalHoldingsResourcesApiService SearchRetrainedLhr", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+        t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.SearchRetrainedLhr(context.Background()).Execute()
+        resp, httpRes, err := apiClient.LocalHoldingsResourcesApi.SearchRetrainedLhr(context.Background()).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+    })
 
 }
